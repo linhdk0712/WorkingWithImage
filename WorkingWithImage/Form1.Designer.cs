@@ -35,6 +35,7 @@
             this.btnSelectFolder = new System.Windows.Forms.Button();
             this.btnProcess = new System.Windows.Forms.Button();
             this.rtbResult = new System.Windows.Forms.RichTextBox();
+            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -92,6 +93,7 @@
             this.btnSelectFolder.TabIndex = 2;
             this.btnSelectFolder.Text = "Chọn thư mục";
             this.btnSelectFolder.UseVisualStyleBackColor = true;
+            this.btnSelectFolder.Click += new System.EventHandler(this.btnSelectFolder_Click);
             // 
             // btnProcess
             // 
@@ -101,11 +103,16 @@
             this.btnProcess.TabIndex = 3;
             this.btnProcess.Text = "Xử lý";
             this.btnProcess.UseVisualStyleBackColor = true;
+            this.btnProcess.Click += new System.EventHandler(this.btnProcess_Click);
             // 
             // rtbResult
             // 
+            this.rtbResult.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.rtbResult.Location = new System.Drawing.Point(30, 35);
             this.rtbResult.Name = "rtbResult";
+            this.rtbResult.ReadOnly = true;
             this.rtbResult.Size = new System.Drawing.Size(1126, 316);
             this.rtbResult.TabIndex = 0;
             this.rtbResult.Text = "";
@@ -137,6 +144,7 @@
         private System.Windows.Forms.Button btnProcess;
         private System.Windows.Forms.Button btnSelectFolder;
         private System.Windows.Forms.RichTextBox rtbResult;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
     }
 }
 
